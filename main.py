@@ -2,8 +2,8 @@ from tkinter import *
 from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
-db = client.login
-user = db.user
+database = client.login
+user = database.user
 
 def Identification(): 
  screen= Tk()
@@ -16,15 +16,15 @@ def Identification():
 
  Label(screen, text="LOGIN", font=("Arial black",25)).place(x=640,y=200)
 
- Label(screen,text="user name : ",font=("Arial black",12)).place(x=545,y=260)
+ Label(screen,text="User name : ",font=("Arial black",12)).place(x=545,y=260)
  username_entry=Entry(screen, textvariable="",width=50)
  username_entry.place(x=545,y=290)
 
- Label(screen,text="password : ",font=("Arial black",12)).place(x=545,y=320)
+ Label(screen,text="Password : ",font=("Arial black",12)).place(x=545,y=320)
  password_entry=Entry(screen, textvariable="",width=50,show="*")
  password_entry.place(x=545,y=350)
 
- Button(screen, text="  entrer  ", bg="#000000", fg="#ffffff",font=("Arial black",10),command=LoginFind).place(x=660,y=400)
+ Button(screen, text="  Entrer  ", bg="#000000", fg="#ffffff",font=("Arial black",10),command=LoginFind).place(x=660,y=400)
  screen.mainloop()
 
 def LoginFind():
@@ -53,17 +53,17 @@ def Add():
 
  Label(screen1, text="Add User", font=("Arial black",25)).place(x=610,y=200)
  
- Label(screen1,text="user name : ",font=("Arial black",12)).place(x=545,y=260)
+ Label(screen1,text="User name : ",font=("Arial black",12)).place(x=545,y=260)
  username_add_entry=Entry(screen1, textvariable="",width=50)
  username_add_entry.place(x=545,y=290)
  
- Label(screen1,text="password : ",font=("Arial black",12)).place(x=545,y=320)
+ Label(screen1,text="Password : ",font=("Arial black",12)).place(x=545,y=320)
  password_add_entry=Entry(screen1, textvariable="",width=50,show="*")
  password_add_entry.place(x=545,y=350)
  
- Button(screen1, text="add", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=InsertUser).place(x=545,y=400)
- Button(screen1, text="consult", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=ConsultBox).place(x=647,y=400)
- Button(screen1, text="return", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=screen1.destroy).place(x=750,y=400)
+ Button(screen1, text="Add", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=InsertUser).place(x=545,y=400)
+ Button(screen1, text="Consult", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=ConsultBox).place(x=647,y=400)
+ Button(screen1, text="Return", bg="#000000", fg="#ffffff",width=10,font=("Arial black",10),command=screen1.destroy).place(x=750,y=400)
  
  screen1.mainloop()
 
